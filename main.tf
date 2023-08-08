@@ -13,3 +13,9 @@ terraform {
 provider "azurerm" {
   features {}
 }
+
+# Create a resource group
+resource "azurerm_resource_group" "rg" {
+  name     = "myTFResourceGroup"
+  location = "Brazil South"
+} 
