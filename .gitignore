@@ -1,0 +1,22 @@
+# Arquivos de log
+*.log
+
+# Diretório de plugins Terraform
+.terraform/
+
+# Arquivos de estado local do Terraform
+*.tfstate
+*.tfstate.*
+
+# Arquivos de backup criados durante o comando "terraform init"
+*.backup
+
+# Arquivos sensíveis
+secrets.tfvars
+
+# Ignore quaisquer arquivos binários ou outras extensões, conforme necessário
+*.bin
+*.zip
+
+# Arquivos de checkpoint (utilizados para verificar atualizações)
+.terraform-checkpoint
