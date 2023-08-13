@@ -39,10 +39,20 @@ resource "azurerm_linux_web_app" "app" {
   site_config {
     always_on = false
     application_stack {
-        docker_image = "nginx"
-        docker_image_tag = "latest"
+        docker_image = var.docker_image
+        docker_image_tag = var.docker_image_tag
     }
   }
+}
+
+variable "docker_image" {
+  type = string
+  default = "nginx"
+}
+
+variable "docker_image_tag" {
+  type = string
+  default = "latest"
 }
 
 output "app_url" {
