@@ -21,7 +21,7 @@ resource "azurerm_resource_group" "rg" {
 } 
 
 # Create a service plan
-resource "azurerm_app_service_plan" "asp" {
+resource "azurerm_service_plan" "asp" {
   name                = "myTFAppServicePlan"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
